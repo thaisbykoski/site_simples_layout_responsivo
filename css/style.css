@@ -1,0 +1,234 @@
+@charset "UTF-8";
+/* Resetar os valores de espaçamento */
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: Arial, sans-serif; }
+
+/* Menu e Header */
+.menu {
+  background-color: #222;
+  font-family: Arial, sans-serif;
+  height: 50px;
+  width: 100%; }
+  @media (max-width: 800px) {
+    .menu {
+      margin-left: -100%;
+      margin-top: 5px;
+      transition: all .4s; } }
+  .menu a {
+    background-color: #222;
+    color: #fff;
+    display: block;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none; }
+  .menu a:hover {
+    background-color: #f4f4f4;
+    color: #555; }
+  .menu ul {
+    list-style: none;
+    position: relative; }
+    .menu ul ul {
+      position: absolute;
+      visibility: hidden; }
+      @media (max-width: 800px) {
+        .menu ul ul {
+          max-height: 0;
+          overflow: hidden;
+          position: static;
+          transition: all 4s; } }
+      .menu ul ul li {
+        border-bottom: solid 1px #ccc;
+        float: none; }
+        .menu ul ul li a {
+          background-color: #069; }
+    .menu ul li {
+      float: left;
+      width: 150px; }
+      @media (max-width: 800px) {
+        .menu ul li {
+          float: none;
+          width: 100%; } }
+    .menu ul li:hover ul {
+      visibility: visible; }
+      @media (max-width: 800px) {
+        .menu ul li:hover ul {
+          height: auto;
+          max-height: 200px; } }
+
+label[for="bt_menu"] {
+  background-color: #222;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  font-family: Arial;
+  font-size: 30px;
+  padding: 5px;
+  text-align: center;
+  height: 50px; }
+  @media (max-width: 800px) {
+    label[for="bt_menu"] {
+      display: block; } }
+
+#bt_menu {
+  display: none; }
+
+@media (max-width: 800px) {
+  #bt_menu:checked ~ .menu {
+    margin-left: 0; } }
+
+header {
+  max-width: auto; }
+  header img {
+    height: auto;
+    max-width: 100%;
+    width: auto; }
+    @media (max-width: 800px) {
+      header img {
+        margin-top: -50px; } }
+
+/* Conteúdo */
+section {
+  border: 1px grey outset;
+  height: auto;
+  margin: 120px;
+  padding: 50px;
+  width: auto; }
+  @media (max-width: 800px) {
+    section {
+      border: none;
+      margin: 35px;
+      padding: 0; } }
+  section .detalhe {
+    margin: 50px; }
+    @media (max-width: 800px) {
+      section .detalhe {
+        margin: 0px;
+        margin-bottom: 20px;
+        padding: 10px;
+        border: solid 1px #002; } }
+  section h1 {
+    color: #000;
+    font-family: arial;
+    font-size: 40px;
+    margin-bottom: 30px;
+    text-align: center; }
+  section h2 {
+    color: #000;
+    font-family: arial;
+    margin-bottom: 30px;
+    text-align: center; }
+
+/* Página de Contato */
+.content {
+  display: flex;
+  position: relative; }
+  @media (max-width: 800px) {
+    .content {
+      display: block;
+      margin-top: 50px; } }
+  .content .contatos {
+    flex: 1;
+    margin-left: 0; }
+    @media (max-width: 800px) {
+      .content .contatos {
+        margin-left: 0; } }
+  .content .address {
+    padding: 10px; }
+    @media (max-width: 800px) {
+      .content .address {
+        margin-bottom: 40px; } }
+  .content .form-right {
+    margin-right: 200px; }
+    @media (max-width: 800px) {
+      .content .form-right {
+        margin-left: 50px; } }
+  .content h1 {
+    color: black;
+    font-family: arial;
+    font-size: 40px; }
+    @media (max-width: 800px) {
+      .content h1 {
+        margin-left: -15px;
+        font-size: 37px;
+        margin-top: 20px;
+        width: 400px; } }
+  .content fieldset {
+    border: 0;
+    float: right;
+    margin-right: 20px;
+    width: 340px; }
+    @media (max-width: 800px) {
+      .content fieldset {
+        float: none;
+        margin-right: 0; } }
+    .content fieldset h2 {
+      color: black;
+      font-family: arial;
+      margin-right: 55px;
+      margin-top: 30px;
+      text-align: center; }
+    .content fieldset .grupo:before, .content fieldset .grupo:after {
+      content: " ";
+      display: table; }
+    .content fieldset .grupo:after {
+      clear: both; }
+    .content fieldset .campo {
+      float: left;
+      margin-bottom: 1em;
+      margin-right: 1em;
+      display: block; }
+      .content fieldset .campo label {
+        margin-bottom: grey;
+        display: block; }
+      .content fieldset .campo input[type="text"],
+      .content fieldset .campo input[type="email"],
+      .content fieldset .campo input[type="url"],
+      .content fieldset .campo input[type="tel"],
+      .content fieldset .campo textarea {
+        border: 1px solid #CCC;
+        box-shadow: 2px 2px 2px #000;
+        display: block;
+        padding: 0.2em; }
+      .content fieldset .campo select {
+        border: 1px solid #CCC;
+        box-shadow: 2px 2px 2px #000;
+        display: block;
+        padding: 0.2em; }
+        .content fieldset .campo select option {
+          padding-right: 1em; }
+      .content fieldset .campo input:focus,
+      .content fieldset .campo select:focus,
+      .content fieldset .campo textarea:focus {
+        background: #FFC; }
+  .content button {
+    font-size: 1.5em;
+    background: #F90;
+    border: 0;
+    margin-bottom: 1em;
+    color: #FFF;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); }
+  .content button:hover {
+    background: #FB0;
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: none; }
+  .content .botao, .content select, .content label.checkbox {
+    cursor: pointer; }
+
+/* Fim da página de contato */
+/* Footer */
+footer {
+  background: #000;
+  width: auto;
+  display: block;
+  padding: 10px; }
+  footer p {
+    background: #000;
+    color: #fff; }
+
+/*# sourceMappingURL=style.css.map */
