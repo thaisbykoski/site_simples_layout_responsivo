@@ -5,6 +5,10 @@
 	  <meta charset="utf-8">
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="css/style.css" />
+      <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+      <!-- Inclusão do Plugin jQuery Validation-->
+      <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+      <script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
 
       <script type= "text/javascript" src="script/script.js"></script>
 
@@ -15,18 +19,23 @@
     <input type="checkbox" id="bt_menu" />
     <label for="bt_menu"> &#9776; </label>
     <nav class="menu">
-            <ul>
-                <li><a href="index.html"> Página Inicial </a></li>
-                <li><a href="servicos.html"> Serviços </a></li>
-                <li><a href="sobre.html"> Sobre </a></li>
-                <li><a href="contato.html"> Contato </a></li>
-            </ul>
+      <ul>
+        <li><a href="index.html"> Home </a></li>
+        <li><a href="servicos.html"> Serviços </a>
+          <ul>
+            <li><a href="servicos-1.html">Serviço 1</a></li>
+            <li><a href="servicos-2.html">Serviço 2</a></li>
+          </ul>
+        </li>
+        <li><a href="sobre.html"> Sobre </a></li>
+        <li><a href="contato.html"> Contato </a></li>
+
+      </ul>
     </nav>
 
-
-    <header>
-        <img src="imagens/headersite.jpg" >
-    </header>
+		<header>
+			<img class="banner" src="imagens/headersite.jpg" >
+		</header>
 
     <br> <br>
     <div class="content"> 
@@ -45,37 +54,33 @@
             <h1> Entre em Contato </h1>
 
 
-            <form action="#" method="post">
+            <form action="#" id="formContact" method="post">
             <fieldset>
                 <h2> Nos Envie uma mensagem </h2> <br>
                 <fieldset class="grupo">
                     <div class="campo">
-                        <label for="nome">Nome</label>
-                        <input type="text" id="nome" name="nome" style="width: 20em" value="">
-                    </div>
-                    <div class="campo">
-                        <label for="snome">Sobrenome</label>
-                        <input type="text" id="snome" name="snome" style="width: 20em" value="">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" style="width: 20em" value="" placeholder="Nome Completo" required>
                     </div>
                 </fieldset>
 
                 <div class="campo">
                     <label for="email">E-mail</label>
-                    <input type="text" id="email" name="email" style="width: 20em" value="">
+                    <input type="email" id="email" name="email" style="width: 20em" value="" placeholder="email@email.com" required>
                 </div>
                 <div class="campo">
-                    <label for="telefone">Telefone</label>
-                    <input type="text" id="telefone" name="telefone" style="width: 10em" value="">
+                    <label for="phone">Telefone</label>
+                    <input type="text" id="phone" name="phone" minlength="7" style="width: 10em" value="" placeholder="XX xxxxx-xxxx" required >
                 </div>
 
                 <fieldset class="grupo">
                     <div class="campo">
                         <label for="cidade">Cidade</label>
-                        <input type="text" id="cidade" name="cidade" style="width: 10em" value="">
+                        <input type="text" id="cidade" name="cidade" style="width: 10em" value="" required>
                     </div>
                     <div class="campo">
                         <label for="estado">Estado</label>
-                        <select name="estado" id="estado">
+                        <select name="estado" id="estado" required>
                             <option value="RS">RS</option>
                             <option value="PR">PR</option>
                             <option value="SC">SC</option>
@@ -90,7 +95,7 @@
 
                 <div class="campo">
                     <label for="mensagem">Mensagem</label>
-                    <textarea rows="6" style="width: 20em" id="mensagem" name="mensagem"></textarea>
+                    <textarea rows="6" style="width: 20em" id="mensagem" name="mensagem" required></textarea>
                 </div>
 
                 <div class="campo">
@@ -107,10 +112,24 @@
         </div>
     </div>
 
-
-
-    <footer> <p align="center">Criado por Thais Soares Bykoski. </p> </footer>
-
-
+    <footer> 
+        <nav>
+          <div>
+            <ul>
+              <li><a href="index.html"> Home </a></li>
+              <li><a href="servicos.html"> Serviços </a></li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li><a href="sobre.html"> Sobre </a></li>
+              <li><a href="contato.html"> Contato </a></li>
+            </ul>
+          </div>
+        </nav>
+        
+        <p align="center">Criado por Thais Soares Bykoski. </p> 
+      
+      </footer>
 </body>
 </html>
