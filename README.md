@@ -16,5 +16,5 @@
 * Sobre;
 * Contato
 
-###### Design e menus diferentes para as telas mobile e desktop, otimizando o mesmo código HTML para ambas as telas.
+##### Design e menus diferentes para as telas mobile e desktop, otimizando o mesmo código HTML para ambas as telas.
 
